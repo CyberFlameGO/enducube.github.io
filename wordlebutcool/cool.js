@@ -116,7 +116,7 @@ function share() {
         sharestring += wrongemoji;
       }
     });
-  if (navigator.userAgentData.mobile) {
+  if (navigator.share) {
     navigator.share({text: sharestring});
   } else {
     navigator.clipboard.writeText(sharestring);
