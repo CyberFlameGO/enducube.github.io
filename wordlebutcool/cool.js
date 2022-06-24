@@ -117,7 +117,9 @@ function share() {
       }
     });
   if (navigator.share) {
-    navigator.share({text: sharestring});
+    navigator.share({text: sharestring})
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
   } else {
     navigator.clipboard.writeText(sharestring);
     alert("copied to clipboard");
