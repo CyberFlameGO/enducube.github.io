@@ -10,7 +10,6 @@ var guesses = [];
 var sharestring = "";
 const wrongemoji = "\uD83D\uDFE5";
 const rightemoji = "\uD83D\uDFE9";
-const btn = document.querySelector('sharebutton');
 
 var today = new Date();
 var todaynumberseed = today.getFullYear()*today.getMonth()*today.getDate();
@@ -163,6 +162,9 @@ function load() {
   }
  
 }
+
+const btn = document.getElementById('sharebutton');
+
 function save() {
   document.cookie = encodeURIComponent("wins="+wins+";losses="+losses+";guesses="+guesses.toString()+";lastplayedseed="+todaynumberseed+";");
   //console.log(decodeURIComponent(document.cookie));
