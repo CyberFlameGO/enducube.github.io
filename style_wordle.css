@@ -44,7 +44,7 @@ margin: auto;
 right: 10%;
 font-size: x-large;
 }
-a.sharebutton {
+a#sharebutton {
     color: #eee;
     padding: 5px;
     position:inherit;
