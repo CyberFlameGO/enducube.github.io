@@ -10,6 +10,7 @@ var guesses = [];
 var sharestring = "";
 const wrongemoji = "\uD83D\uDFE5";
 const rightemoji = "\uD83D\uDFE9";
+const btn = document.querySelector('sharebutton');
 
 var today = new Date();
 var todaynumberseed = today.getFullYear()*today.getMonth()*today.getDate();
@@ -103,6 +104,7 @@ document.getElementById("buttonlist").addEventListener("click", function(e){
 
 
 // sharing results
+btn.addEventListener('click', share);
 
 function share() {
   sharestring = "totally real wordle "+wordlenumber.toString()+" "+(10-guessesleft)+"/10\n"
