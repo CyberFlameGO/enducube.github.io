@@ -101,7 +101,7 @@ document.getElementById("buttonlist").addEventListener("click", function(e){
 
 
 
-
+const btn = document.getElementById('sharebutton');
 // sharing results
 btn.addEventListener('click', share);
 
@@ -162,8 +162,6 @@ function load() {
   }
  
 }
-
-const btn = document.getElementById('sharebutton');
 
 function save() {
   document.cookie = encodeURIComponent("wins="+wins+";losses="+losses+";guesses="+guesses.toString()+";lastplayedseed="+todaynumberseed+";");
